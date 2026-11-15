@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090b14" />
+  <meta name="description" content="Clipora AI turns your script into cinematic videos." />
+  <title>Clipora AI — Turn scripts into stories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Clipora AI home">
+        <span class="brand-mark"><span></span></span><span>clipora<span class="brand-ai"> AI</span></span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav">
+        <a class="nav-link active" href="#studio"><span class="nav-icon">✳</span> Create video</a>
+        <a class="nav-link" href="#projects"><span class="nav-icon">▤</span> My projects</a>
+        <a class="nav-link" href="#brand-kit"><span class="nav-icon">◇</span> Brand kit <span class="soon">SOON</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="credit-card">
+          <div class="credit-top"><span>Monthly credits</span><span class="credit-dot"></span></div>
+          <div class="credit-number"><strong id="sideCredits">600</strong><span>/ 600</span></div>
+          <div class="credit-track"><span></span></div>
+          <p>Your creative energy, ready to use.</p>
+          <button class="upgrade-btn" id="upgradeSide">Upgrade plan <span>↗</span></button>
+        </div>
+        <a class="nav-link muted" href="#settings"><span class="nav-icon">⚙</span> Settings</a>
+        <div class="profile">
+          <div class="avatar">C</div><div><strong>Creator account</strong><small>Free preview workspace</small></div><span class="more">•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <strong>New video</strong></div>
+        <div class="top-actions"><span class="status-pill"><i></i> Studio preview</span><button class="help-btn" id="helpBtn">? <span>Help</span></button></div>
+      </header>
+
+      <section class="welcome">
+        <div><div class="eyebrow"><span class="sparkle">✦</span> YOUR CREATIVE STUDIO</div>
+          <h1>Turn your script into<br><span>something unforgettable.</span></h1>
+          <p>One idea. A few choices. A video that brings your story to life.</p>
+        </div>
+        <div class="welcome-art" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="art-play">▶</div><div class="art-caption">YOUR NEXT<br>BIG STORY</div></div>
+      </section>
+
+      <div class="studio-grid" id="studio">
+        <section class="panel script-panel">
+          <div class="panel-heading"><div><div class="step-label">STEP 01 <span></span> THE STORY</div><h2>What’s your video about?</h2></div><span class="panel-icon">✎</span></div>
+          <label class="field-label" for="scriptInput">Your script <span>Paste your script or describe your idea</span></label>
+          <textarea id="scriptInput" maxlength="5000" placeholder="A curious little astronaut discovers a glowing garden on a distant planet. As the flowers begin to light up, the whole planet slowly awakens..."></textarea>
+          <div class="textarea-footer"><span id="wordCount">0 words · 0 / 5,000 characters</span><button class="text-button" id="sampleBtn">Try sample script ↗</button></div>
+          <div class="divider"></div>
+          <div class="panel-heading compact"><div><div class="step-label">STEP 02 <span></span> THE LOOK</div><h2>Choose your visual style</h2></div></div>
+          <div class="style-options" role="group" aria-label="Visual style">
+            <button class="style-card selected" data-style="Animation"><span class="style-art animation-art"><i>✦</i><b>✧</b></span><strong>Animation</strong><small>Expressive & lively</small><span class="check">✓</span></button>
+            <button class="style-card" data-style="2D"><span class="style-art two-d-art"><i>◒</i><b>✳</b></span><strong>2D</strong><small>Illustrated worlds</small><span class="check">✓</span></button>
+            <button class="style-card" data-style="3D"><span class="style-art three-d-art"><i>◉</i><b>✧</b></span><strong>3D</strong><small>Cinematic depth</small><span class="check">✓</span></button>
+          </div>
+          <div class="divider"></div>
+          <div class="panel-heading compact"><div><div class="step-label">STEP 03 <span></span> THE FORMAT</div><h2>Where will it be watched?</h2></div></div>
+          <div class="format-options">
+            <button class="format-card selected" data-format="16:9"><span class="format-preview landscape"><i></i></span><span><strong>YouTube</strong><small>Landscape · 16:9</small></span><span class="radio"></span></button>
+            <button class="format-card" data-format="9:16"><span class="format-preview portrait"><i></i></span><span><strong>Reels & Shorts</strong><small>Vertical · 9:16</small></span><span class="radio"></span></button>
+          </div>
+        </section>
+
+        <section class="panel settings-panel">
+          <div class="panel-heading"><div><div class="step-label">STEP 04 <span></span> THE DETAILS</div><h2>Make it yours</h2></div><span class="panel-icon">⚙</span></div>
+          <label class="field-label">Video duration</label>
+          <div class="duration-options">
+            <button class="choice selected" data-duration="10">10 sec</button><button class="choice" data-duration="20">20 sec</button><button class="choice" data-duration="30">30 sec</button>
+          </div>
+          <label class="field-label quality-label">Video quality</label>
+          <div class="quality-options">
+            <button class="quality-choice selected" data-quality="720p"><span><strong>720p</strong><small>Standard</small></span><span class="radio"></span></button>
+            <button class="quality-choice" data-quality="1080p"><span><strong>1080p</strong><small>Full HD</small></span><span class="radio"></span></button>
+            <button class="quality-choice" data-quality="4K"><span><strong>4K</strong><small>Ultra HD</small></span><span class="radio"></span></button>
+          </div>
+          <div class="divider"></div>
+          <div class="credit-summary">
+            <div><span class="summary-title">Estimated generation cost</span><span class="summary-sub">Based on your selected settings</span></div>
+            <strong><b id="costValue">30</b> <small>credits</small></strong>
+          </div>
+          <div class="credit-balance"><span>Available balance</span><strong><span id="balanceValue">600</span> credits</strong></div>
+          <button class="generate-btn" id="generateBtn"><span>✦</span> Generate my video <i>→</i></button>
+          <p class="secure-note"><span>✧</span> Your script stays yours. You’re in control.</p>
+          <div class="tip-card"><span class="tip-icon">✦</span><div><strong>A little creative tip</strong><p>Clear scene descriptions and visual details help create more consistent results.</p></div></div>
+        </section>
+      </div>
+
+      <section class="projects-section" id="projects">
+        <div class="projects-heading"><div><div class="step-label">YOUR LIBRARY</div><h2>Recent projects</h2></div><button class="view-all" id="viewAll">View all <span>→</span></button></div>
+        <div class="empty-projects"><div class="empty-icon">▧</div><div><strong>Your next great video starts here.</strong><p>Generated videos will appear here, ready to preview and download.</p></div><span class="empty-spark">✦</span></div>
+      </section>
+      <footer>© 2026 Clipora AI <span>Made for stories worth sharing.</span><a href="mailto:hello@clipora.ai">Contact</a></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal" hidden><div class="modal"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div class="modal-symbol">✦</div><h2 id="modalTitle">Generation preview</h2><p id="modalText"></p><button class="modal-action" id="modalAction">Got it</button></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
